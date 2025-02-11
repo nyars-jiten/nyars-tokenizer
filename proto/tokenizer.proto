@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tokenizer;
+
+// github.com/nyars-jiten/nyars-monorepo/internal/infra/grpc
+option go_package = "github.com/nyars-jiten/nyars-monorepo/internal/infra/grpc";
+
+message TokenizeRequest {
+    string request = 1;
+}
+
+message TokenizeResponse {
+    string surface = 1;
+    string feature = 2;
+}
+
+service Tokenizer {
+    rpc Tokenize(TokenizeRequest) returns (stream TokenizeResponse) {}
+}
