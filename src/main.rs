@@ -1,7 +1,7 @@
 use tokenizer::tokenizer_server::{Tokenizer, TokenizerServer};
 use tokenizer::{TokenizeRequest, TokenizeResponse};
 use tokio::sync::mpsc;
-use tokio_stream::{wrappers::ReceiverStream, Stream};
+use tokio_stream::{wrappers::ReceiverStream, Stream, StreamExt};
 use tonic::{transport::Server, Request, Response, Status};
 
 use std::io::Read;
