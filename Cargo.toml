@@ -13,7 +13,7 @@ ruzstd = "0.8.0"
 tokio = { version = "1.43.0", features = ["rt-multi-thread"] }
 tokio-stream = "0.1.17"
 tonic = "0.12.3"
-vibrato = "0.5.1"
+vibrato = "0.5.2"
 
 [profile.release]
 strip = true
